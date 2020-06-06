@@ -12,6 +12,7 @@ const Todo = ({ task, removeTask }: IProps) => {
         <li>
             <input
                 type='checkbox'
+                data-testid={task.Id}
                 checked={task.done}
                 onChange={() => {
                     task.done = !task.done;
