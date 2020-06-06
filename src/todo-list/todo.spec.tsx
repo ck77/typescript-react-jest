@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { render, fireEvent, screen, queryByText, getByTestId } from '@testing-library/react';
-import '@testing-library/jest-dom'
+import '@testing-library/jest-dom';
 
 import Task from './task';
 import Todo from './todo';
