@@ -1,10 +1,14 @@
 import * as React from "react";
 
 import HiddenMessage from './hidden-message';
+import Component1 from './component1';
 
 const App = () => {
     return (
-        <HiddenMessage>papago</HiddenMessage>
+        <React.Fragment>
+            <HiddenMessage>papago</HiddenMessage>
+            <Component1></Component1>
+        </React.Fragment>
     )
 }
 
