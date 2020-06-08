@@ -12,7 +12,11 @@ class Component1 extends React.Component<{}, { showUser: boolean, username: stri
 
 
     handleClick = () => {
-        this.setState({ showUser: !this.state.showUser });
+        setTimeout(() => {
+            this.setState({ showUser: !this.state.showUser });
+        }, 2000);
+
+        // this.setState({ showUser: !this.state.showUser });
     }
 
     handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -23,7 +27,7 @@ class Component1 extends React.Component<{}, { showUser: boolean, username: stri
         return (
             <React.Fragment>
                 <label htmlFor="username">Username</label>
-                <input id="username" onChange={(e) => this.handleChange(e)} />
+                <input id="username" data-testid="username" onChange={(e) => this.handleChange(e)} />
                 <button onClick={() => this.handleClick()}>Print username</button>
                 {this.state.showUser ? <p>{this.state.username}</p> : null}
 

@@ -24,7 +24,7 @@
   "scripts": {
     "dev": "webpack-dev-server --mode development",
     "test:all": "jest",
-    "test": "jest src/basic-example/basic.spec.ts"
+    "test": "jest src/basic-example/component1.spec.tsx"
   },
   "name": "typescript-react-jest",
   "version": "1.0.0",

@@ -2,14 +2,14 @@ test('test', () => {
 
     const myMockFn = jest
         .fn()
-        .mockImplementation(scalar => 42 + scalar)
+        .mockImplementation(scalar => 42 + scalar)   // replace by mockReturnValue(777)
         .mockReturnValue(777)
         .mockName('add42');
 
 
     // //expect(myMockFn()).toBe(NaN);
     //expect(myMockFn()).toBe(777);
-    expect(myMockFn(1)).toBe(43);
+    expect(myMockFn(1, 2, 3)).toBe(777);
 
 
     // const myMock = jest.fn();
